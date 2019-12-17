@@ -7,8 +7,11 @@ Yii Web Programming Framework
 
 ## Guide
 
+- Main working folder `mih`
 - Theme at this path `mih/themes/makeithappen` keeps developing on this theme
 - Database is using SQLite `mih/protected/data/mih.db`, no need to connect to MySQL or any others
+
+- Developer Document [link](https://www.yiiframework.com/doc/guide/1.1/en)
 
 ## Requirements
 - [ ] Enable XDebug
