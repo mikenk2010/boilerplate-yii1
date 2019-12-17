@@ -66,6 +66,10 @@ class PostController extends Controller
         $model = new Post;
         if (isset($_POST['Post'])) {
             $model->attributes = $_POST['Post'];
+
+            // trigger event
+            $model->onNewPost = array($this, 'sendEmail');
+
             if ($model->save()) {
                 $this->redirect(array('view', 'id' => $model->id));
             }
@@ -218,4 +222,15 @@ class PostController extends Controller
 
         return $comment;
     }
+
+    /**
+     * Event trigger
+     * @param $event
+     */
+    public function sendEmail($event)
+    {
+        $post = $event->sender;
+        var_dump($post->title, $post->content);
+    }
+
 }
