@@ -3,6 +3,8 @@ $this->pageTitle = Yii::app()->name . ' - Login';
 $this->breadcrumbs = array(
   'Login',
 );
+
+var_dump($_SERVER);
 ?>
 
 <script src="https://apis.google.com/js/platform.js?onload=mihRenderButton" async defer></script>
