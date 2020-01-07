@@ -5,6 +5,10 @@ $this->breadcrumbs = array(
 );
 
 var_dump($_SERVER);
+
+if (file_exists("/app/mih/protected/data/mih.db")) {
+    echo "Found DB";
+}
 ?>
 
 <script src="https://apis.google.com/js/platform.js?onload=mihRenderButton" async defer></script>
