@@ -8,6 +8,8 @@ var_dump($_SERVER);
 
 if (file_exists("/app/mih/protected/data/mih.db")) {
     echo "Found DB";
+} else {
+    echo "Not Found DB";
 }
 ?>
 
