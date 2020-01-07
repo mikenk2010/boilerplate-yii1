@@ -117,15 +117,16 @@ class SiteController extends Controller
      */
     public function actionLoginGoogle()
     {
-        if (!empty($_POST) && isset($_POST['email']) && isset($_POST['name'])) {
-            $model = new LoginForm;
-            if ($model->loginGoogle()) {
-                $this->redirect(Yii::app()->user->returnUrl);
-            } else {
-                $model->createUserGoogle();
-                $this->redirect(Yii::app()->user->returnUrl);
-            }
-        }
+//        if (!empty($_POST) && isset($_POST['email']) && isset($_POST['name'])) {
+//            $model = new LoginForm;
+//            if ($model->loginGoogle()) {
+//                $this->redirect(Yii::app()->user->returnUrl);
+//            } else {
+//                $model->createUserGoogle();
+//                $this->redirect(Yii::app()->user->returnUrl);
+//            }
+//        }
+        phpinfo();
     }
 
     /**
