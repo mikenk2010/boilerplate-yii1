@@ -113,6 +113,22 @@ class SiteController extends Controller
     }
 
     /**
+     * Displays the login page
+     */
+    public function actionLoginGoogle()
+    {
+        if (!empty($_POST) && isset($_POST['email']) && isset($_POST['name'])) {
+            $model = new LoginForm;
+            if ($model->loginGoogle()) {
+                $this->redirect(Yii::app()->user->returnUrl);
+            } else {
+                $model->createUserGoogle();
+                $this->redirect(Yii::app()->user->returnUrl);
+            }
+        }
+    }
+
+    /**
      * Logs out the current user and redirect to homepage.
      */
     public function actionLogout()

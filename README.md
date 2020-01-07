@@ -27,5 +27,20 @@ Yii Web Programming Framework
 
 ![XDebug](https://i.imgur.com/yszUnvp.png)
 
+## Google Login
 
+- Guide [link](https://developers.google.com/identity/sign-in/web/sign-in)
+
+## Deploy Yii to Heroku
+1. Install Heroku CLI (link)[https://devcenter.heroku.com/articles/getting-started-with-php#set-up]
+2. Create Heroku Account
+3. Create Heroku App
+- Run `heroku create` inside your repository
+
+![Heroku Create](https://i.imgur.com/2JD2R6e.png)
+
+4. Deploying with Git
+- Run `heroku git:remote -a <your app on step 3>
+
+![Deploy with Git](https://i.imgur.com/adLLRZJ.png)
 
