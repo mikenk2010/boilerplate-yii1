@@ -5,6 +5,9 @@
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
+
+$connectionString = getenv('DB_CONNECTION_STRING') ? getenv('DB_CONNECTION_STRING') : 'sqlite:protected/data/mih.sqlite';
+
 return array(
   'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
   'name' => 'MIH - {{Project Name}}',
@@ -28,7 +31,7 @@ return array(
       'allowAutoLogin' => true,
     ),
     'db' => array(
-      'connectionString' => APP_ENV === 'production' ? DB_CONNECTION_STRING : 'sqlite:/app/mih/protected/data/mih.sqlite',
+      'connectionString' => $connectionString,
       'tablePrefix' => 'tbl_',
     ),
       // uncomment the following to use a MySQL database

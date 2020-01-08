@@ -4,8 +4,6 @@ $this->breadcrumbs = array(
   'Login',
 );
 
-echo getenv('DB_CONNECTION_STRING');
-
 ?>
 
 <script src="https://apis.google.com/js/platform.js?onload=mihRenderButton" async defer></script>
