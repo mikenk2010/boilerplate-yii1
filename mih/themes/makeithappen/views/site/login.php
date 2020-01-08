@@ -8,13 +8,13 @@ var_dump($_SERVER);
 
 echo "<hr/><br/>";
 
-if (file_exists(dirname(__FILE__) . '/../data/mih.sqlite')) {
+if (file_exists("/app/mih/protected/data/mih.sqlite")) {
     echo "Found DB";
 } else {
     echo "Not Found DB";
 }
 
-if (is_writable(dirname(__FILE__) . '/../data/mih.sqlite')) {
+if (is_writable("/app/mih/protected/data/mih.sqlite")) {
     echo "Write DB";
 } else {
     echo "Not Write DB";
