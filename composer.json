@@ -1,6 +1,7 @@
 {
   "require": {
     "swiftmailer/swiftmailer": "^6.0",
-    "ext-pdo_sqlite": "*"
+    "ext-pdo_sqlite": "*",
+    "google/apiclient": "^2.0"
   }
 }

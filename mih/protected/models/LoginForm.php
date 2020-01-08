@@ -9,9 +9,13 @@ class LoginForm extends CFormModel
 {
     public $username;
     public $password;
+    public $email;
     public $rememberMe;
+    public $token;
 
     private $_identity;
+
+    public $googleData;
 
     /**
      * Declares the validation rules.
@@ -76,10 +80,9 @@ class LoginForm extends CFormModel
 
     public function loginGoogle()
     {
-        if ($this->_identity === null) {
-            $this->_identity = new UserIdentity($this->username, $this->password);
-            $this->_identity->authenticate();
-        }
+        $this->_identity = new UserIdentityGoogle($this->googleData['username'], "");
+        $this->_identity->authenticate();
+
         if ($this->_identity->errorCode === UserIdentity::ERROR_NONE) {
             $duration = $this->rememberMe ? 3600 * 24 * 30 : 0; // 30 days
             Yii::app()->user->login($this->_identity, $duration);
@@ -93,9 +96,10 @@ class LoginForm extends CFormModel
     public function createUserGoogle()
     {
         $user = new User();
-        $user->setPassword($password);
-        $user->username = $user_data->username;
-        $user->status = 1;
+        $user->password = $this->googleData['password'];
+        $user->username = $this->googleData['username'];
+        $user->email = $this->googleData['email'];
+        $user->token = $this->googleData['token'];
         $user->save();
     }
 }

@@ -754,3 +754,474 @@ Stack trace:
 REQUEST_URI=/index.php/post/index
 HTTP_REFERER=http://local.mihyii.com/index.php/site/login
 ---
+2020/01/08 05:54:11 [error] [exception.Firebase\JWT\BeforeValidException] Firebase\JWT\BeforeValidException: Cannot handle token prior to 2020-01-08T05:54:14+0000 in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/firebase/php-jwt/src/JWT.php:127
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/AccessToken/Verify.php(103): Firebase\JWT\JWT::decode('eyJhbGciOiJSUzI...', '-----BEGIN PUBL...', Array)
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/Client.php(741): Google_AccessToken_Verify->verifyIdToken('eyJhbGciOiJSUzI...', '309433023394-vr...')
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(130): Google_Client->verifyIdToken('eyJhbGciOiJSUzI...')
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
+2020/01/08 05:54:38 [error] [exception.Firebase\JWT\BeforeValidException] Firebase\JWT\BeforeValidException: Cannot handle token prior to 2020-01-08T05:54:41+0000 in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/firebase/php-jwt/src/JWT.php:127
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/AccessToken/Verify.php(103): Firebase\JWT\JWT::decode('eyJhbGciOiJSUzI...', '-----BEGIN PUBL...', Array)
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/Client.php(741): Google_AccessToken_Verify->verifyIdToken('eyJhbGciOiJSUzI...', '309433023394-vr...')
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(130): Google_Client->verifyIdToken('eyJhbGciOiJSUzI...')
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
+2020/01/08 06:13:47 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 5 database is locked. The SQL statement executed was: INSERT INTO 'tbl_user' ("password", "username", "email") VALUES (:yp0, :yp1, :yp2).
+2020/01/08 06:15:35 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 5 database is locked. The SQL statement executed was: INSERT INTO 'tbl_user' ("password", "username", "email") VALUES (:yp0, :yp1, :yp2).
+2020/01/08 06:22:08 [error] [php] Non-static method User::hashPassword() should not be called statically (/Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php:134)
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): SiteController->runAction()
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CWebApplication->run()
+REQUEST_URI=/index.php/site/loginGoogle
+2020/01/08 06:22:19 [error] [php] Non-static method User::hashPassword() should not be called statically (/Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php:134)
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): SiteController->runAction()
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CWebApplication->run()
+REQUEST_URI=/index.php/site/loginGoogle
+2020/01/08 06:25:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 5 database is locked. The SQL statement executed was: INSERT INTO 'tbl_user' ("password", "username", "email") VALUES (:yp0, :yp1, :yp2).
+2020/01/08 06:25:57 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 5 database is locked. The SQL statement executed was: INSERT INTO 'tbl_user' ("password", "username", "email") VALUES (:yp0, :yp1, :yp2).
+2020/01/08 06:25:57 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 5 database is locked in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/db/CDbCommand.php:367
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/db/ar/CActiveRecord.php(1083): CDbCommand->execute()
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/db/ar/CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/models/LoginForm.php(102): CActiveRecord->save()
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(141): LoginForm->createUserGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
+2020/01/08 06:26:26 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 5 database is locked. The SQL statement executed was: INSERT INTO 'tbl_user' ("password", "username", "email") VALUES (:yp0, :yp1, :yp2).
+2020/01/08 06:26:27 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 5 database is locked in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/db/CDbCommand.php:367
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/db/ar/CActiveRecord.php(1083): CDbCommand->execute()
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/db/ar/CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/models/LoginForm.php(102): CActiveRecord->save()
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(141): LoginForm->createUserGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
+2020/01/08 06:37:51 [error] [php] Undefined index: password (/Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/models/LoginForm.php:82)
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): SiteController->runAction()
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CWebApplication->run()
+REQUEST_URI=/index.php/site/loginGoogle
+2020/01/08 07:14:24 [error] [exception.Firebase\JWT\BeforeValidException] Firebase\JWT\BeforeValidException: Cannot handle token prior to 2020-01-08T07:14:27+0000 in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/firebase/php-jwt/src/JWT.php:127
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/AccessToken/Verify.php(103): Firebase\JWT\JWT::decode('eyJhbGciOiJSUzI...', '-----BEGIN PUBL...', Array)
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/Client.php(741): Google_AccessToken_Verify->verifyIdToken('eyJhbGciOiJSUzI...', '309433023394-vr...')
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(131): Google_Client->verifyIdToken('eyJhbGciOiJSUzI...')
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
+2020/01/08 07:14:30 [error] [php] Undefined index: token (/Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php:131)
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): SiteController->runAction()
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CWebApplication->run()
+REQUEST_URI=/index.php/site/loginGoogle
+2020/01/08 07:34:21 [error] [exception.Firebase\JWT\BeforeValidException] Firebase\JWT\BeforeValidException: Cannot handle token prior to 2020-01-08T07:34:24+0000 in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/firebase/php-jwt/src/JWT.php:127
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/AccessToken/Verify.php(103): Firebase\JWT\JWT::decode('eyJhbGciOiJSUzI...', '-----BEGIN PUBL...', Array)
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/Client.php(741): Google_AccessToken_Verify->verifyIdToken('eyJhbGciOiJSUzI...', '309433023394-vr...')
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(131): Google_Client->verifyIdToken('eyJhbGciOiJSUzI...')
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
+2020/01/08 07:37:42 [error] [php] Undefined index: token (/Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php:166)
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): SiteController->runAction()
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CWebApplication->run()
+REQUEST_URI=/index.php/site/logout
+2020/01/08 07:38:48 [error] [exception.Firebase\JWT\BeforeValidException] Firebase\JWT\BeforeValidException: Cannot handle token prior to 2020-01-08T07:38:51+0000 in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/firebase/php-jwt/src/JWT.php:127
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/AccessToken/Verify.php(103): Firebase\JWT\JWT::decode('eyJhbGciOiJSUzI...', '-----BEGIN PUBL...', Array)
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/Client.php(741): Google_AccessToken_Verify->verifyIdToken('eyJhbGciOiJSUzI...', '309433023394-vr...')
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(131): Google_Client->verifyIdToken('eyJhbGciOiJSUzI...')
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
+2020/01/08 07:39:19 [error] [php] Undefined index: token (/Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php:131)
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): SiteController->runAction()
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CWebApplication->run()
+REQUEST_URI=/index.php/site/loginGoogle
+2020/01/08 07:39:24 [error] [php] Undefined index: token (/Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php:131)
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): SiteController->runAction()
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CWebApplication->run()
+REQUEST_URI=/index.php/site/loginGoogle
+2020/01/08 07:47:03 [error] [exception.Firebase\JWT\BeforeValidException] Firebase\JWT\BeforeValidException: Cannot handle token prior to 2020-01-08T07:47:06+0000 in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/firebase/php-jwt/src/JWT.php:127
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/AccessToken/Verify.php(103): Firebase\JWT\JWT::decode('eyJhbGciOiJSUzI...', '-----BEGIN PUBL...', Array)
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/Client.php(741): Google_AccessToken_Verify->verifyIdToken('eyJhbGciOiJSUzI...', '309433023394-vr...')
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(131): Google_Client->verifyIdToken('eyJhbGciOiJSUzI...')
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
+2020/01/08 07:47:53 [error] [exception.Firebase\JWT\BeforeValidException] Firebase\JWT\BeforeValidException: Cannot handle token prior to 2020-01-08T07:47:55+0000 in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/firebase/php-jwt/src/JWT.php:127
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/AccessToken/Verify.php(103): Firebase\JWT\JWT::decode('eyJhbGciOiJSUzI...', '-----BEGIN PUBL...', Array)
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/Client.php(741): Google_AccessToken_Verify->verifyIdToken('eyJhbGciOiJSUzI...', '309433023394-vr...')
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(131): Google_Client->verifyIdToken('eyJhbGciOiJSUzI...')
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
+2020/01/08 07:48:37 [error] [exception.Firebase\JWT\BeforeValidException] Firebase\JWT\BeforeValidException: Cannot handle token prior to 2020-01-08T07:48:39+0000 in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/firebase/php-jwt/src/JWT.php:127
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/AccessToken/Verify.php(103): Firebase\JWT\JWT::decode('eyJhbGciOiJSUzI...', '-----BEGIN PUBL...', Array)
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/Client.php(741): Google_AccessToken_Verify->verifyIdToken('eyJhbGciOiJSUzI...', '309433023394-vr...')
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(131): Google_Client->verifyIdToken('eyJhbGciOiJSUzI...')
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
+2020/01/08 07:56:09 [error] [exception.Firebase\JWT\BeforeValidException] Firebase\JWT\BeforeValidException: Cannot handle token prior to 2020-01-08T07:56:12+0000 in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/firebase/php-jwt/src/JWT.php:127
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/AccessToken/Verify.php(103): Firebase\JWT\JWT::decode('eyJhbGciOiJSUzI...', '-----BEGIN PUBL...', Array)
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/Client.php(741): Google_AccessToken_Verify->verifyIdToken('eyJhbGciOiJSUzI...', '309433023394-vr...')
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(131): Google_Client->verifyIdToken('eyJhbGciOiJSUzI...')
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
+2020/01/08 07:56:10 [error] [exception.Firebase\JWT\BeforeValidException] Firebase\JWT\BeforeValidException: Cannot handle token prior to 2020-01-08T07:56:12+0000 in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/firebase/php-jwt/src/JWT.php:127
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/AccessToken/Verify.php(103): Firebase\JWT\JWT::decode('eyJhbGciOiJSUzI...', '-----BEGIN PUBL...', Array)
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/Client.php(741): Google_AccessToken_Verify->verifyIdToken('eyJhbGciOiJSUzI...', '309433023394-vr...')
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(131): Google_Client->verifyIdToken('eyJhbGciOiJSUzI...')
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
+2020/01/08 07:59:54 [error] [exception.Firebase\JWT\BeforeValidException] Firebase\JWT\BeforeValidException: Cannot handle token prior to 2020-01-08T07:59:57+0000 in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/firebase/php-jwt/src/JWT.php:127
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/AccessToken/Verify.php(103): Firebase\JWT\JWT::decode('eyJhbGciOiJSUzI...', '-----BEGIN PUBL...', Array)
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/Client.php(741): Google_AccessToken_Verify->verifyIdToken('eyJhbGciOiJSUzI...', '309433023394-vr...')
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(131): Google_Client->verifyIdToken('eyJhbGciOiJSUzI...')
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
+2020/01/08 08:02:37 [error] [exception.Firebase\JWT\BeforeValidException] Firebase\JWT\BeforeValidException: Cannot handle token prior to 2020-01-08T08:02:40+0000 in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/firebase/php-jwt/src/JWT.php:127
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/AccessToken/Verify.php(103): Firebase\JWT\JWT::decode('eyJhbGciOiJSUzI...', '-----BEGIN PUBL...', Array)
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/Client.php(741): Google_AccessToken_Verify->verifyIdToken('eyJhbGciOiJSUzI...', '309433023394-vr...')
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(131): Google_Client->verifyIdToken('eyJhbGciOiJSUzI...')
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
+2020/01/08 08:02:56 [error] [exception.Firebase\JWT\BeforeValidException] Firebase\JWT\BeforeValidException: Cannot handle token prior to 2020-01-08T08:02:59+0000 in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/firebase/php-jwt/src/JWT.php:127
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/AccessToken/Verify.php(103): Firebase\JWT\JWT::decode('eyJhbGciOiJSUzI...', '-----BEGIN PUBL...', Array)
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/Client.php(741): Google_AccessToken_Verify->verifyIdToken('eyJhbGciOiJSUzI...', '309433023394-vr...')
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(131): Google_Client->verifyIdToken('eyJhbGciOiJSUzI...')
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
+2020/01/08 08:04:27 [error] [exception.Firebase\JWT\BeforeValidException] Firebase\JWT\BeforeValidException: Cannot handle token prior to 2020-01-08T08:04:29+0000 in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/firebase/php-jwt/src/JWT.php:127
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/AccessToken/Verify.php(103): Firebase\JWT\JWT::decode('eyJhbGciOiJSUzI...', '-----BEGIN PUBL...', Array)
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/Client.php(741): Google_AccessToken_Verify->verifyIdToken('eyJhbGciOiJSUzI...', '309433023394-vr...')
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(131): Google_Client->verifyIdToken('eyJhbGciOiJSUzI...')
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
+2020/01/08 08:04:59 [error] [exception.Firebase\JWT\BeforeValidException] Firebase\JWT\BeforeValidException: Cannot handle token prior to 2020-01-08T08:05:02+0000 in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/firebase/php-jwt/src/JWT.php:127
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/AccessToken/Verify.php(103): Firebase\JWT\JWT::decode('eyJhbGciOiJSUzI...', '-----BEGIN PUBL...', Array)
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/Client.php(741): Google_AccessToken_Verify->verifyIdToken('eyJhbGciOiJSUzI...', '309433023394-vr...')
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(131): Google_Client->verifyIdToken('eyJhbGciOiJSUzI...')
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
+2020/01/08 08:05:45 [error] [exception.Firebase\JWT\BeforeValidException] Firebase\JWT\BeforeValidException: Cannot handle token prior to 2020-01-08T08:05:48+0000 in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/firebase/php-jwt/src/JWT.php:127
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/AccessToken/Verify.php(103): Firebase\JWT\JWT::decode('eyJhbGciOiJSUzI...', '-----BEGIN PUBL...', Array)
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/Client.php(741): Google_AccessToken_Verify->verifyIdToken('eyJhbGciOiJSUzI...', '309433023394-vr...')
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(131): Google_Client->verifyIdToken('eyJhbGciOiJSUzI...')
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
+2020/01/08 08:06:32 [error] [exception.Firebase\JWT\BeforeValidException] Firebase\JWT\BeforeValidException: Cannot handle token prior to 2020-01-08T08:06:35+0000 in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/firebase/php-jwt/src/JWT.php:127
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/AccessToken/Verify.php(103): Firebase\JWT\JWT::decode('eyJhbGciOiJSUzI...', '-----BEGIN PUBL...', Array)
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/Client.php(741): Google_AccessToken_Verify->verifyIdToken('eyJhbGciOiJSUzI...', '309433023394-vr...')
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(131): Google_Client->verifyIdToken('eyJhbGciOiJSUzI...')
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
+2020/01/08 08:08:46 [error] [exception.Firebase\JWT\BeforeValidException] Firebase\JWT\BeforeValidException: Cannot handle token prior to 2020-01-08T08:08:49+0000 in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/firebase/php-jwt/src/JWT.php:127
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/AccessToken/Verify.php(103): Firebase\JWT\JWT::decode('eyJhbGciOiJSUzI...', '-----BEGIN PUBL...', Array)
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/Client.php(741): Google_AccessToken_Verify->verifyIdToken('eyJhbGciOiJSUzI...', '309433023394-vr...')
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(131): Google_Client->verifyIdToken('eyJhbGciOiJSUzI...')
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
+2020/01/08 08:08:55 [error] [php] Undefined index: token (/Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php:131)
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): SiteController->runAction()
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CWebApplication->run()
+REQUEST_URI=/index.php/site/loginGoogle
+2020/01/08 08:10:14 [error] [exception.Firebase\JWT\BeforeValidException] Firebase\JWT\BeforeValidException: Cannot handle token prior to 2020-01-08T08:10:17+0000 in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/firebase/php-jwt/src/JWT.php:127
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/AccessToken/Verify.php(103): Firebase\JWT\JWT::decode('eyJhbGciOiJSUzI...', '-----BEGIN PUBL...', Array)
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/Client.php(741): Google_AccessToken_Verify->verifyIdToken('eyJhbGciOiJSUzI...', '309433023394-vr...')
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(131): Google_Client->verifyIdToken('eyJhbGciOiJSUzI...')
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
+2020/01/08 08:12:05 [error] [exception.Firebase\JWT\BeforeValidException] Firebase\JWT\BeforeValidException: Cannot handle token prior to 2020-01-08T08:12:08+0000 in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/firebase/php-jwt/src/JWT.php:127
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/AccessToken/Verify.php(103): Firebase\JWT\JWT::decode('eyJhbGciOiJSUzI...', '-----BEGIN PUBL...', Array)
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/Client.php(741): Google_AccessToken_Verify->verifyIdToken('eyJhbGciOiJSUzI...', '309433023394-vr...')
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(131): Google_Client->verifyIdToken('eyJhbGciOiJSUzI...')
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
+2020/01/08 09:18:33 [error] [exception.Firebase\JWT\BeforeValidException] Firebase\JWT\BeforeValidException: Cannot handle token prior to 2020-01-08T09:18:36+0000 in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/firebase/php-jwt/src/JWT.php:127
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/AccessToken/Verify.php(103): Firebase\JWT\JWT::decode('eyJhbGciOiJSUzI...', '-----BEGIN PUBL...', Array)
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/Client.php(741): Google_AccessToken_Verify->verifyIdToken('eyJhbGciOiJSUzI...', '309433023394-vr...')
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(122): Google_Client->verifyIdToken('eyJhbGciOiJSUzI...')
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---

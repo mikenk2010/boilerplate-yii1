@@ -117,16 +117,38 @@ class SiteController extends Controller
      */
     public function actionLoginGoogle()
     {
-//        if (!empty($_POST) && isset($_POST['email']) && isset($_POST['name'])) {
-//            $model = new LoginForm;
-//            if ($model->loginGoogle()) {
-//                $this->redirect(Yii::app()->user->returnUrl);
-//            } else {
-//                $model->createUserGoogle();
-//                $this->redirect(Yii::app()->user->returnUrl);
-//            }
-//        }
-        phpinfo();
+        // Validate Token
+        $client = new Google_Client(['client_id' => '309433023394-vri887fvjsg81nkm8gtpjk955skgi3su.apps.googleusercontent.com']);  // Specify the CLIENT_ID of the app that accesses the backend
+        $payload = $client->verifyIdToken($_POST['token']);
+        if ($payload) {
+            $model = new LoginForm;
+            $user = new User;
+            $_POST['password'] = $user->hashPassword($_POST['email']);
+            $_POST['username'] = explode("@", $_POST['email'])[0];
+            $model->googleData = $_POST;
+
+            $client->setAccessToken($_POST['token']);
+
+            if ($model->loginGoogle()) {
+            } else {
+                // Create if not have
+                $model->createUserGoogle();
+
+                // Login
+                $model->loginGoogle();
+            }
+
+            $data = json_encode(['status' => 'success', 'msg' => '', 'action' => Yii::app()->user->returnUrl]);
+
+        } else {
+            $data = json_encode(['status' => 'error', 'msg' => 'Invalid Token']);
+        }
+
+
+        $this->layout = false;
+        header('Content-type: application/json');
+        echo json_encode($data);
+        Yii::app()->end();
     }
 
     /**
@@ -134,6 +156,12 @@ class SiteController extends Controller
      */
     public function actionLogout()
     {
+        $user = User::model()->findbyPk(Yii::app()->user->id);
+        if ($user->token) {
+            $client = new Google_Client(['client_id' => '309433023394-vri887fvjsg81nkm8gtpjk955skgi3su.apps.googleusercontent.com']);
+
+            $client->revokeToken($user->token);
+        }
         Yii::app()->user->logout();
         $this->redirect(Yii::app()->homeUrl);
     }

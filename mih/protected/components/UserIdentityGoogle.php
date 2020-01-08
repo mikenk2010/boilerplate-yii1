@@ -5,7 +5,7 @@
  * It contains the authentication method that checks if the provided
  * data can identity the user.
  */
-class UserIdentity extends CUserIdentity
+class UserIdentityGoogle extends CUserIdentity
 {
     private $_id;
 
@@ -18,8 +18,6 @@ class UserIdentity extends CUserIdentity
         $user = User::model()->find('LOWER(username)=?', array(strtolower($this->username)));
         if ($user === null) {
             $this->errorCode = self::ERROR_USERNAME_INVALID;
-        } else if (!$user->validatePassword($this->password)) {
-            $this->errorCode = self::ERROR_PASSWORD_INVALID;
         } else {
             $this->_id = $user->id;
             $this->username = $user->username;
@@ -35,10 +33,5 @@ class UserIdentity extends CUserIdentity
     public function getId()
     {
         return $this->_id;
-    }
-
-    public function getToken()
-    {
-        return $this->token;
     }
 }

@@ -6,10 +6,6 @@ $this->breadcrumbs = array(
 
 ?>
 
-<script src="https://apis.google.com/js/platform.js?onload=mihRenderButton" async defer></script>
-<meta name="google-signin-client_id" content="309433023394-vri887fvjsg81nkm8gtpjk955skgi3su.apps.googleusercontent.com">
-
-
 <h1>Login</h1>
 
 <p>Please fill out the following form with your login credentials:</p>
@@ -49,7 +45,7 @@ $this->breadcrumbs = array(
 
     <hr/>
     Login Google via Client
-    <div id="my-signin2"></div>
+    <div class="g-signin2" data-onsuccess="onSuccess"></div>
     <br/>
     <hr/>
     Login Google via Backend
@@ -59,11 +55,23 @@ $this->breadcrumbs = array(
     <?php $this->endWidget(); ?>
 </div><!-- form -->
 
+<a href="#" onclick="signOut();">Sign out</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
+
 
 <script>
   function onSuccess(googleUser) {
+    debugger;
     var profile = googleUser.getBasicProfile();
     console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Token: ' + googleUser.getAuthResponse().id_token);
     console.log('Name: ' + profile.getName());
     console.log('Image URL: ' + profile.getImageUrl());
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
@@ -72,30 +80,24 @@ $this->breadcrumbs = array(
     $.ajax({
       url: "/index.php/site/loginGoogle",
       data: {
+        token: googleUser.getAuthResponse().id_token,
         email: profile.getEmail(),
         name: profile.getName()
       },
       type: 'POST',
       success: function (result) {
-        $("#div1").html(result);
+        result = JSON.parse(result)
+        if (result.status === 'success') {
+          setTimeout(function () {
+            window.location.replace(result.action);
+          }, 2000)
+        } else {
+          alert(result.msg)
+        }
+        console.log(result)
       }
     });
 
   }
 
-  function onFailure(error) {
-    console.log(error);
-  }
-
-  function mihRenderButton() {
-    gapi.signin2.render('my-signin2', {
-      'scope': 'profile email',
-      'width': 240,
-      'height': 50,
-      'longtitle': true,
-      'theme': 'dark',
-      'onsuccess': onSuccess,
-      'onfailure': onFailure
-    });
-  }
 </script>
