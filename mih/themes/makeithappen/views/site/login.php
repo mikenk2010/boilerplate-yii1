@@ -4,7 +4,7 @@ $this->breadcrumbs = array(
   'Login',
 );
 
-echo DB_CONNECTION_STRING;
+echo getenv('DB_CONNECTION_STRING');
 
 ?>
 
