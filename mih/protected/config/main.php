@@ -28,7 +28,7 @@ return array(
       'allowAutoLogin' => true,
     ),
     'db' => array(
-      'connectionString' => 'sqlite:/app/mih/protected/data/mih.sqlite',
+      'connectionString' => 'sqlite:' . dirname(__FILE__) . '/../data/mih.sqlite',
       'tablePrefix' => 'tbl_',
     ),
       // uncomment the following to use a MySQL database
