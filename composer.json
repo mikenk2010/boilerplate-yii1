@@ -1,5 +1,6 @@
 {
-    "require": {
-        "swiftmailer/swiftmailer": "^6.0"
-    }
+  "require": {
+    "swiftmailer/swiftmailer": "^6.0",
+    "ext-pdo_sqlite": "*"
+  }
 }
