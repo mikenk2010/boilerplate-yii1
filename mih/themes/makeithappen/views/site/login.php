@@ -4,21 +4,8 @@ $this->breadcrumbs = array(
   'Login',
 );
 
-var_dump($_SERVER);
+echo DB_CONNECTION_STRING;
 
-echo "<hr/><br/>";
-
-if (file_exists("/app/mih/protected/data/mih.sqlite")) {
-    echo "Found DB";
-} else {
-    echo "Not Found DB";
-}
-
-if (is_writable("/app/mih/protected/data/mih.sqlite")) {
-    echo "Write DB";
-} else {
-    echo "Not Write DB";
-}
 ?>
 
 <script src="https://apis.google.com/js/platform.js?onload=mihRenderButton" async defer></script>

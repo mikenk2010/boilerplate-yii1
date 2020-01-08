@@ -28,7 +28,7 @@ return array(
       'allowAutoLogin' => true,
     ),
     'db' => array(
-      'connectionString' => 'sqlite:/app/mih/protected/data/mih.sqlite',
+      'connectionString' => APP_ENV === 'production' ? DB_CONNECTION_STRING : 'sqlite:/app/mih/protected/data/mih.sqlite',
       'tablePrefix' => 'tbl_',
     ),
       // uncomment the following to use a MySQL database
