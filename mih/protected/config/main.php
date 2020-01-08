@@ -8,6 +8,8 @@
 
 $connectionString = getenv('DB_CONNECTION_STRING') ? getenv('DB_CONNECTION_STRING') : 'sqlite:protected/data/mih.sqlite';
 
+var_dump($connectionString);
+
 return array(
   'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
   'name' => 'MIH - {{Project Name}}',
