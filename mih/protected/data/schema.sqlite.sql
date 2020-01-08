@@ -13,7 +13,8 @@ CREATE TABLE tbl_user
 	username VARCHAR(128) NOT NULL,
 	password VARCHAR(128) NOT NULL,
 	email VARCHAR(128) NOT NULL,
-	profile TEXT
+	profile TEXT,
+	token TEXT
 );
 
 CREATE TABLE tbl_post

@@ -1225,3 +1225,20 @@ Stack trace:
 REQUEST_URI=/index.php/site/loginGoogle
 HTTP_REFERER=http://local.mihyii.com/index.php/site/login
 ---
+2020/01/08 09:28:26 [error] [exception.Firebase\JWT\BeforeValidException] Firebase\JWT\BeforeValidException: Cannot handle token prior to 2020-01-08T09:28:28+0000 in /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/firebase/php-jwt/src/JWT.php:127
+Stack trace:
+#0 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/AccessToken/Verify.php(103): Firebase\JWT\JWT::decode('eyJhbGciOiJSUzI...', '-----BEGIN PUBL...', Array)
+#1 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/vendor/google/apiclient/src/Google/Client.php(741): Google_AccessToken_Verify->verifyIdToken('eyJhbGciOiJSUzI...', '309433023394-vr...')
+#2 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/protected/controllers/SiteController.php(122): Google_Client->verifyIdToken('eyJhbGciOiJSUzI...')
+#3 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/actions/CInlineAction.php(49): SiteController->actionLoginGoogle()
+#4 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(282): CController->run('loginGoogle')
+#8 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/web/CWebApplication.php(141): CWebApplication->runController('site/loginGoogl...')
+#9 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/bao/Documents/Projects/Websites/MIH/yii-final-project/mih/index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/loginGoogle
+HTTP_REFERER=http://local.mihyii.com/index.php/site/login
+---
