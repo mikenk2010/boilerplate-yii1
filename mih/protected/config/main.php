@@ -6,9 +6,7 @@
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 
-$connectionString = getenv('DB_CONNECTION_STRING') ? getenv('DB_CONNECTION_STRING') : 'sqlite:protected/data/mih.sqlite';
-
-var_dump($connectionString);
+$connectionString = getenv('DB_CONNECTION_STRING') ? getenv('DB_CONNECTION_STRING') : 'sqlite:protected/data/mih.db';
 
 return array(
   'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
